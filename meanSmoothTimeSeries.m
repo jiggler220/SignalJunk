@@ -30,4 +30,12 @@ for i=k+1:n-k-1 % from signal start to signal end
 end
 
 figure(1), clf, hold on % clear figure, keep the axes
-plot(time_s, signal, time_s, filtSig, 'linew', 2); % plot signal vs time and time vs filtered signal
+plot(time_s, signal, 'b', 'linew', 2); % plot signal vs time with a blue line
+plot(time_s, filtSig, 'r', 'linew', 2); % plot time vs filtered signal with a red line
+
+xlabel('Time (seconds)'); % Label for the x-axis
+ylabel('Amplitude'); % Label for the y-axis
+
+legend('Original Signal', 'Filtered Signal'); % Add legend
+
+hold off % Release the hold on the current axes
